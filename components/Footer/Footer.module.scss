@@ -1,3 +1,24 @@
+@import '../../styles/mixins.scss';
+
 .footer {
-	background-color: #efefef;
+	background-color: var(--color-white);
+	padding: 15px;
+	@include for-desktop-up {
+		padding: 15px 0;
+	}
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1310px;
+	margin: auto;
+	align-items: center;
+}
+
+.copyright {
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: 0.05em;
 }

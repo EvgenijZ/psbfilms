@@ -1,3 +1,14 @@
+:root {
+	--color-white: #fff;
+	--color-black: #111;
+	--color-orange: #f26e16;
+	--color-gray: #858585;
+}
+
 * {
 	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Montserrat', sans-serif;
 }
