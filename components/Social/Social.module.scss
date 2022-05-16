@@ -1,1 +1,30 @@
+.social {
+	display: flex;
+	align-items: center;
+}
 
+.link {
+	&:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+.icon {
+	font-size: 18px;
+}
+
+.vimeo {
+	color: #1ab7ea;
+}
+
+.youtube {
+	color: #ff0000;
+}
+
+.facebook {
+	color: #3b5998;
+}
