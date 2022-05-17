@@ -3,6 +3,12 @@
 .navbar {
 	padding: 0;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1310px;
+	margin: auto;
+	padding: 15px;
 	@include for-tablet-landscape-up {
 		padding: 32px 0;
 	}
@@ -47,6 +53,12 @@
 		color: var(--color-black);
 		&:hover {
 			color: var(--color-gray);
+		}
+	}
+	.active {
+		color: var(--color-orange);
+		&:hover {
+			opacity: 0.75;
 		}
 	}
 }
