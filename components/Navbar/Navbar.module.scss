@@ -1,5 +1,11 @@
+@import '../../styles/mixins.scss';
+
 .navbar {
-	padding: 32px 0;
+	padding: 0;
+	position: relative;
+	@include for-tablet-landscape-up {
+		padding: 32px 0;
+	}
 }
 
 .list {
@@ -7,13 +13,24 @@
 	margin: 0;
 	list-style-type: none;
 	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	@include for-tablet-landscape-up {
+		flex-direction: row;
+		text-align: left;
+	}
 }
 
 .item {
 	text-transform: uppercase;
+	margin: 15px 0;
 
-	&:not(:last-child) {
-		margin-right: 50px;
+	@include for-tablet-landscape-up {
+		margin: 0;
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
 	}
 }
 
