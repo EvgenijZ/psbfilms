@@ -1,0 +1,53 @@
+@import '../../styles/mixins.scss';
+
+.caption {
+	background-color: var(--color-orange);
+	position: absolute;
+	z-index: 15;
+	right: -55px;
+	bottom: 102px;
+	padding: 60px 50px;
+	@include for-tablet-landscape-up {
+		max-width: 335px;
+	}
+}
+
+.link {
+	text-decoration: none;
+}
+
+.title {
+	color: var(--color-white);
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 37px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	margin: 0;
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+.director {
+	color: var(--color-white);
+	margin: 15px 0 0 0;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.category {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-white);
+	transform: rotate(-90deg);
+	position: absolute;
+	right: -10px;
+	bottom: 60px;
+}
