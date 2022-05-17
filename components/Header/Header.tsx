@@ -1,5 +1,11 @@
+import Navbar from '../Navbar/Navbar';
+
 const Header: React.FC = () => {
-	return <header>123</header>;
+	return (
+		<header>
+			<Navbar />
+		</header>
+	);
 };
 
 export default Header;
