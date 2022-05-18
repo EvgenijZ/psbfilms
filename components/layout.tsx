@@ -11,6 +11,7 @@ export default function Layout({ children }) {
 		<>
 			<Header />
 			<main className={prepareStyles()}>{children}</main>
+			<div className='logo-text'>Psb</div>
 			<Footer />
 		</>
 	);
