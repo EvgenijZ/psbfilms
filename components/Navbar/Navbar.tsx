@@ -1,8 +1,10 @@
+import { useContext } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { ThemeContext } from '../../contexts/theme-context';
 import Hamburger from '../Hamburger/Hamburger';
 import Logotype from '../Logotype/Logotype';
 import styles from './Navbar.module.scss';
+import { useRouter } from 'next/router';
 
 type TLink = {
 	name: string;
@@ -11,7 +13,7 @@ type TLink = {
 
 const Navbar: React.FC = () => {
 	const router = useRouter();
-	const themeStyle = router.pathname === '/' ? 'light' : 'dark';
+	const themeVariant = useContext(ThemeContext);
 	const prepareLinkStyle = (link) =>
 		router.pathname == link ? `${styles.link} ${styles.active}` : styles.link;
 
@@ -24,8 +26,8 @@ const Navbar: React.FC = () => {
 		{ name: 'Contact', slug: '/contact' },
 	];
 	return (
-		<nav className={`${styles.navbar} ${styles[themeStyle]}`}>
-			<Logotype variant={themeStyle} />
+		<nav className={`${styles.navbar} ${styles[themeVariant]}`}>
+			<Logotype variant={themeVariant} />
 			<Hamburger>
 				<ul className={styles.list}>
 					{links.map(({ name, slug }) => (
