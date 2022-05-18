@@ -1,0 +1,16 @@
+.clients {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.client {
+	margin-bottom: 15px;
+}
+
+.logotype {
+	&:hover {
+		opacity: 0.75;
+	}
+}
