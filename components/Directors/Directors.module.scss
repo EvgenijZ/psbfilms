@@ -1,0 +1,28 @@
+.directors {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.director {
+	flex: 0 0 296px;
+}
+
+.firstName {
+	margin-top: 40px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-black);
+}
+
+.lastName {
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 37px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-black);
+}
