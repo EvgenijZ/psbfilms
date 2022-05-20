@@ -1,0 +1,31 @@
+.stats {
+	margin-top: 50px;
+}
+
+.stats-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+
+.item {
+	margin-bottom: 15px;
+}
+
+.number {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 40px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-black);
+}
+
+.text {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 40px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-gray);
+	margin-bottom: 0;
+}
