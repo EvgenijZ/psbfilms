@@ -1,5 +1,6 @@
 import styles from './Clients.module.scss';
 import Image from 'next/image';
+import Title from '../Title/Title';
 
 type TClient = {
 	id: number;
@@ -25,18 +26,21 @@ const Clients: React.FC = () => {
 
 	return (
 		<section className={styles.clients}>
-			{clients &&
-				clients.map((client) => (
-					<div key={client.id} className={styles.client}>
-						<Image
-							className={styles.logotype}
-							src={`/clients/${client.src}`}
-							height={client.height}
-							width={client.width}
-							alt={client.name}
-						/>
-					</div>
-				))}
+			<Title title='Clients' subtitle='Our' inline />
+			<div className={styles['clients-wrap']}>
+				{clients &&
+					clients.map((client) => (
+						<div key={client.id} className={styles.client}>
+							<Image
+								className={styles.logotype}
+								src={`/clients/${client.src}`}
+								height={client.height}
+								width={client.width}
+								alt={client.name}
+							/>
+						</div>
+					))}
+			</div>
 		</section>
 	);
 };
