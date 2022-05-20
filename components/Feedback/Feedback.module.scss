@@ -1,0 +1,37 @@
+.feedback {
+	width: 50%;
+}
+
+.group {
+	display: flex;
+	flex-direction: column;
+	&:not(:last-child) {
+		margin-bottom: 35px;
+	}
+}
+
+.label {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-black);
+	margin-bottom: 15px;
+}
+
+.input {
+	border: none;
+	border-bottom: 1px solid var(--color-light-gray);
+	min-height: 35px;
+	&:focus {
+		outline: none;
+		border-bottom: 1px solid var(--color-gray);
+	}
+}
+
+textarea.input {
+	min-height: 185px;
+	max-width: 100%;
+	margin-bottom: 35px;
+}
