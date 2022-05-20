@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Title from '../Title/Title';
 import styles from './Directors.module.scss';
 
 type TDirector = {
@@ -9,7 +10,14 @@ type TDirector = {
 	socials: [{ name: string; link: string }];
 };
 
-const Directors: React.FC = () => {
+interface Props {
+	title?: string;
+	name?: string;
+	subtitle: string;
+	inline?: string;
+}
+
+const Directors: React.FC<Props> = ({ title, name, subtitle, inline }) => {
 	const directors: [TDirector] = [
 		{
 			id: 1,
@@ -36,22 +44,25 @@ const Directors: React.FC = () => {
 
 	return (
 		<section className={styles.directors}>
-			{directors &&
-				directors.map(({ id, firstName, lastName, image, socials }) => {
-					return (
-						<div key={id} className={styles.director}>
-							<Image
-								className={styles.logotype}
-								src={`/directors/${image}`}
-								height={483}
-								width={296}
-								alt={`${firstName} ${lastName}`}
-							/>
-							<div className={styles.firstName}>{firstName}</div>
-							<div className={styles.lastName}>{lastName}</div>
-						</div>
-					);
-				})}
+			<Title title={title} name={name} subtitle={subtitle} inline={inline} />
+			<div className={styles['directors-wrap']}>
+				{directors &&
+					directors.map(({ id, firstName, lastName, image, socials }) => {
+						return (
+							<div key={id} className={styles.director}>
+								<Image
+									className={styles.logotype}
+									src={`/directors/${image}`}
+									height={483}
+									width={296}
+									alt={`${firstName} ${lastName}`}
+								/>
+								<div className={styles.firstName}>{firstName}</div>
+								<div className={styles.lastName}>{lastName}</div>
+							</div>
+						);
+					})}
+			</div>
 		</section>
 	);
 };
