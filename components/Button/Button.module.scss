@@ -1,0 +1,32 @@
+.button {
+	padding: 17px 33px;
+	border-radius: 0;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.dark {
+	background-color: var(--color-black);
+	color: var(--color-white);
+	border: 1px solid var(--color-black);
+	&:hover {
+		background-color: var(--color-white);
+		color: var(--color-black);
+	}
+}
+
+.light {
+	background-color: var(--color-white);
+	color: var(--color-black);
+	border: 1px solid var(--color-black);
+	&:hover {
+		background-color: var(--color-black);
+		color: var(--color-white);
+	}
+}
