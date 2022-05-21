@@ -2,12 +2,16 @@ import Image from 'next/image';
 import Caption from '../Caption/Caption';
 import styles from './Poster.module.scss';
 
-const Poster: React.FC = () => {
+interface Props {
+	src: string;
+}
+
+const Poster: React.FC<Props> = ({ src }) => {
 	return (
 		<div className={styles.poster}>
 			<Image
 				className={styles.image}
-				src={'/poster1.jpg'}
+				src={src}
 				height={485}
 				width={1032}
 				alt='#'
