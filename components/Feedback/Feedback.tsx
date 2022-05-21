@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Button from '../Button/Button';
-import Title from '../Title/Title';
 import styles from './Feedback.module.scss';
 
 const Feedback: React.FC = () => {
@@ -20,8 +19,7 @@ const Feedback: React.FC = () => {
 		setInput({ ...input, [e.target.id]: e.target.value });
 
 	return (
-		<>
-			<Title name='Us' subtitle='Write' inline />
+		<div className='block-left'>
 			<form className={styles.feedback} onSubmit={sendMessage}>
 				<div className={styles.group}>
 					<label className={styles.label} htmlFor='name'>
@@ -71,7 +69,7 @@ const Feedback: React.FC = () => {
 				</div>
 				<Button type='submit' variant='dark' text='Send message' />
 			</form>
-		</>
+		</div>
 	);
 };
 export default Feedback;
