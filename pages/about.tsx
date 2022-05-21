@@ -1,5 +1,6 @@
 import Clients from '../components/Clients/Clients';
 import Directors from '../components/Directors/Directors';
+import FunStats from '../components/FunStats/FunStats';
 import Poster from '../components/Poster/Poster';
 //TODO: Add SEO and next/head
 
@@ -9,7 +10,8 @@ const About = () => {
 	return (
 		<div>
 			<Title title='Company' subtitle='About' />
-			<Poster />
+			<Poster src='/poster1.jpg' />
+			<FunStats />
 			<Title title='Story' subtitle='Our' inline />
 
 			<div className='text-wrap'>
@@ -39,12 +41,8 @@ const About = () => {
 					</p>
 				</div>
 			</div>
-
-			<Title title='Clients' subtitle='Our' inline />
 			<Clients />
-			<Title title='Team' subtitle='Awesome' inline />
-			<Directors />
-			<Title title='Stats' subtitle='Fun' inline />
+			<Directors name='Team' subtitle='Awesome' inline />
 		</div>
 	);
 };
