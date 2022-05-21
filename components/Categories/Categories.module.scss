@@ -1,0 +1,30 @@
+.categories {
+}
+
+.list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.item {
+}
+
+.link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-gray);
+	text-decoration: none;
+	&:hover {
+		color: var(--color-orange);
+	}
+}
+
+.active {
+	color: var(--color-black);
+}
