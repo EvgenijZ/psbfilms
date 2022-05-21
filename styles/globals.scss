@@ -3,6 +3,7 @@
 	--color-black: #111;
 	--color-orange: #f26e16;
 	--color-gray: #858585;
+	--color-light-gray: #e6e6e6;
 }
 
 * {
@@ -30,7 +31,7 @@ p {
 
 .content {
 	max-width: 1032px;
-	margin: 50px auto;
+	margin: 50px auto 100px auto;
 }
 
 .logo-text {
@@ -63,4 +64,21 @@ p {
 	p:last-child {
 		margin-bottom: 0;
 	}
+}
+
+.block-wrap {
+	display: flex;
+}
+
+.block-left,
+.block-right {
+	flex: 1 0 50%;
+}
+
+.block-left {
+	padding-right: 25px;
+}
+
+.block-right {
+	padding-left: 25px;
 }
