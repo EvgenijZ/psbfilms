@@ -22,8 +22,7 @@ const Navbar: React.FC = () => {
 		{ name: 'About', slug: '/about' },
 		{ name: 'Directors', slug: '/directors' },
 		{ name: 'Work', slug: '/work' },
-		{ name: 'Services & Insentives', slug: '/services-insentives' },
-		{ name: 'Contact', slug: '/contact' },
+		{ name: 'Contacts', slug: '/contacts' },
 	];
 	return (
 		<nav className={`${styles.navbar} ${styles[themeVariant]}`}>
