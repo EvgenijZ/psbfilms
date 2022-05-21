@@ -1,0 +1,38 @@
+.contacts {
+	margin-left: 75px;
+}
+
+.contact {
+}
+
+.title {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-black);
+}
+
+.type {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-gray);
+	margin-top: 5px;
+}
+
+.link {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--color-gray);
+	text-decoration: none;
+	&:hover {
+		color: var(--color-orange);
+	}
+}
